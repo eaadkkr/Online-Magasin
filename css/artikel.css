@@ -1,0 +1,130 @@
+
+/*-----------------------------------------------------
+MENU HØJRE
+-----------------------------------------------------*/
+
+.menu_right {
+    float: right;
+    width: 22%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+  
+.menuitem_right {
+    padding: 5px;
+    margin-top: 0px;
+    display: block;
+    text-align: left;
+    border-top: 1px solid var(--brun);
+}
+  
+.menuitem_right:last-child {
+    border-bottom: 1px solid var(--brun);
+}
+  
+.menuitem_right_link {
+    display: block;
+    color: var(--orange);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+  
+.menuitem_right_link:hover {
+    background-color: var(--orange);
+    color: var(--hvid);
+    border-radius: 10px;
+}
+
+.active_menuitem_right {
+    background-color: var(--orange);
+    color: var(--hvid);
+    border-radius: 10px;
+}
+
+/*-----------------------------------------------------
+ARTIKLER
+-----------------------------------------------------*/
+.artikel {
+    margin-left: 12%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
+
+.artikel_header {
+    color: var(--brun);
+}
+
+.artikel_dato_kategori {
+    color: var(--morkegron);
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.artikel_underoverskrift {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: -10px;
+    margin-top: 20px;
+}
+
+.artikel_tekst {
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Stressnedsættende */
+
+.artikel_stress_billede {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.eva_link {
+    color: var(--orange);
+}
+
+iframe {
+    border: 0;
+}
+
+
+/* Tilbehor */
+
+.tilbehor_liste {
+    color: var(--orange);
+    margin-bottom: 5%;
+}
+
+.liste_item_link {
+    color: var(--orange);
+}
+
+.halsband_sele_snor_billede {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foder_billede {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Snusehåndklæde */
+.video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

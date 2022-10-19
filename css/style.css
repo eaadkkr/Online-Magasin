@@ -1,0 +1,735 @@
+
+/*-----------------------------------------------------
+FARVER (hentes med: var(--navn)
+-----------------------------------------------------*/
+:root {
+    --morkegron: #879E70;
+    --gron: #C9E6AC; 
+    --gul: #F7F3DC;
+    --orange: #cc8329;
+    --brun: #4D2C04;
+    --hvid: #ebebeb;
+    --sort: #333333;
+}
+
+
+/*-----------------------------------------------------
+HTML
+-----------------------------------------------------*/
+html {
+    line-height: 1.5;
+    min-height: 100%;
+}
+
+
+/*-----------------------------------------------------
+BODY
+-----------------------------------------------------*/
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1, h2, h4 {
+    font-family: Corbel, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+/*-----------------------------------------------------
+HEADER
+-----------------------------------------------------*/
+header {
+    background-color: var(--gul);
+}
+
+
+/*-----------------------------------------------------
+TOPBAR
+-----------------------------------------------------*/
+.top_bar {
+    background-color: var(--brun);
+    padding: 5px;
+}
+
+.top_bar_items {
+    display: flex;
+    justify-content: right;
+}
+
+.top_bar_item {
+    text-decoration: none;
+    color: var(--hvid);
+    font-size: 0.9rem;
+    margin-right: 3%;
+    padding: 5px;
+}
+
+.top_bar_item:hover {
+    background-color: var(--orange);
+    border-radius: 5px;
+}
+
+
+/*-----------------------------------------------------
+LOGO
+-----------------------------------------------------*/
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 19%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+/*-----------------------------------------------------
+MENUBAR
+-----------------------------------------------------*/
+.menu_bar {
+    background-color: var(--gul);
+    padding: 8px;
+    border-top: 1px solid var(--brun);
+    border-bottom: 1px solid var(--brun);
+}
+
+.menu_items {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.menu_item {
+    text-decoration: none;
+    color: var(--sort);
+    font-size: 1.3rem;
+}
+
+.menu_item:hover {
+    color: var(--hvid);
+}
+
+
+
+
+/* MOBILMENU */
+
+.mobileicon, .mobileiconlabel {
+    display: none; /*fjerner burgermenuen til mobil*/
+}
+
+.mobilmenuitem {
+    display: none;
+}
+
+
+
+/* DROP DOWN */
+
+.dropbutton {
+    background-color: var(--gul);
+    padding: 8px;
+    font-size: 1.3rem;
+    border: none;
+  }
+
+  .dropbutton:hover {
+    cursor: pointer;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: var(--sort);
+  }
+  
+  .drop_punkter {
+    display: none;
+    position: absolute;
+    background-color: var(--gul);
+    min-width: 20%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .drop_punkter a {
+    color: var(--sort);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.drop_punkter a:hover { /*hover på dropdown punkterne*/
+    background-color: var(--orange);
+    color: var(--hvid);
+} 
+  
+.dropdown:hover .drop_punkter {
+    display: block; /*punkterne skal stå under hinanden*/
+}
+  
+.dropdown:hover .dropbutton { /*hover på menupunktet*/
+    color: var(--hvid); /*VIRKER IKKE!!!*/
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+
+#dropdown_tre:hover .dropbutton {
+    border-bottom-right-radius: 10px;
+}
+
+.active_menuitem {
+    background-color: var(--orange);
+    color: var(--hvid);
+    border-radius: 10px;
+}
+
+/*-----------------------------------------------------
+MAIN
+-----------------------------------------------------*/
+main {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+/*-----------------------------------------------------
+SENEST TILFØJET
+-----------------------------------------------------*/
+.senest_section {
+    margin-bottom: 1%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.senest_inner_flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.senest_et_card {
+    width: 120%;
+    display: block;
+    margin-right: -15%;
+}
+
+.senest_resten_card {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.senest_billede {
+    width: 75%;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-top: 1px solid var(--brun);
+}
+
+.senest_et_link {
+    text-decoration: none;
+}
+
+.text_block_senest {
+    position: relative;
+    width: 75%;
+    bottom: 3rem; 
+    background-color: var(--gul);
+    border-radius: 30% 30% 0 0;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-bottom: 1px solid var(--brun);
+    color: var(--sort);
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+  }
+
+.senest_billedeoverskrift {
+    display: flex;
+    max-height: 1%;
+    border-top: 1px solid var(--brun);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+}
+
+#senest_billedeoverskrift_fem {
+    border-bottom: 1px solid var(--brun);
+}
+
+.senest_resten_link_billede {
+    width: 25%;
+    height: 25%;
+    padding-right: 10px;
+}
+
+.senest_resten_billede {
+    width: 100%;
+    height: 100%;
+}
+
+.senest_resten_link {
+    width: 70%;
+    height: 40%;
+    padding-right: 10px;
+    text-decoration: none; 
+}
+
+.senest_resten_dato {
+    color: var(--morkegron);
+    font-size: 0.8rem;
+}
+
+.senest_resten_overskrift {
+    color: var(--orange);
+    font-size: 1rem;
+    margin-top: -10px;
+}
+
+.section_header {
+    color: var(--brun);
+}
+
+.senest_overskrift {
+    font-size: 1.5rem;
+}
+
+.dato_kategori_senest {
+    color: var(--morkegron);
+}
+  
+
+
+/*-----------------------------------------------------
+TILMELD
+-----------------------------------------------------*/
+.tilmeld_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 10rem;
+    border: 1px solid var(--brun);
+    margin-left: 25%;
+    margin-right: 25%;
+    
+    background-color: var(--gul);
+}
+
+.tilmeld_forside_tekst {
+    width: 15rem;
+    text-align: left;
+    margin-left: 4.4rem;
+    margin-right: 3.8rem;
+    font-size: 1rem;
+}
+
+
+/*-----------------------------------------------------
+FORDELE
+-----------------------------------------------------*/
+
+.fordele_section {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 10px;
+    padding-bottom: 2%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    background-color: var(--gron);
+}
+
+.fordele_inner_section {
+    max-width: 75rem;
+    max-height: 24rem;
+    margin: 0 auto;
+    
+}
+
+.fordele_inner_flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fordele_card {
+    position: block;
+    width: 28%;
+    z-index: 1; /* z-index virker på direct children af flex elementer */
+}
+
+.fordele_billede {
+    width: 100%;
+    height: 15rem;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-top: 1px solid var(--brun);
+}
+
+.text_block_fordele {
+    position: relative;
+    width: 100%;
+    bottom: 2rem;
+    background-color: var(--gul);
+    border-radius: 30% 30% 0 0;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-bottom: 1px solid var(--brun);
+    color: var(--sort);
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+  }
+
+.fordele_stress_link {
+    text-decoration: none;
+}
+
+.pote_billede_et {
+    position: relative;
+    width: 25%;
+    margin-left: 60%;
+    bottom: 15rem;
+}
+
+.pote_billede_to {
+    position: relative;
+    width: 25%;
+    margin-left: 90%;
+    bottom: 40rem;
+}
+
+
+/*-----------------------------------------------------
+FIK DU LÆST
+-----------------------------------------------------*/
+.fikdu_section {
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 3%;
+}
+
+.fikdu_inner_section {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.fikdu_inner_flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fikdu_card {
+    position: block;
+}
+
+.fikdu_billede {
+    width: 100%;
+    height: 20rem;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-top: 1px solid var(--brun);
+}
+
+.text_block_fikdu {
+    position: relative;
+    width: 100%;
+    bottom: 3rem;
+    background-color: var(--gul);
+    border-radius: 30% 30% 0 0;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-bottom: 1px solid var(--brun);
+    color: var(--sort);
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+  }
+
+.dato_kategori_fikdu {
+    color: var(--morkegron);
+}
+
+.fikdu_et_link, .fikdu_to_link {
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------
+TOP 4 MEST LÆSTE ARTIKLER
+-----------------------------------------------------*/
+.topfire_section {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 10px;
+    margin-bottom: 5%;
+    background-color: var(--gron);
+}
+
+.topfire_inner_flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topfire_card {
+    position: block;
+    width: 20%;
+    max-height: 32rem;
+}
+
+.topfire_billede {
+    width: 100%;
+    height: 22rem;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-top: 1px solid var(--brun);
+    margin-top: 10px;
+}
+
+.text_block_topfire {
+    position: relative;
+    width: 100%;
+    bottom: 3rem;
+    background-color: var(--gul);
+    border-radius: 30% 30% 0 0;
+    border-left: 1px solid var(--brun);
+    border-right: 1px solid var(--brun);
+    border-bottom: 1px solid var(--brun);
+    color: var(--sort);
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+}
+
+.dato_kategori_topfire {
+    font-size: 0.8rem;
+    color: var(--morkegron);
+}
+
+.topfire_link {
+    text-decoration: none;
+}
+
+.topfire_pote_billede {
+    position: relative;
+    width: 80px;
+    margin-left: 77%;
+    bottom: 31.25rem;
+}
+
+
+/*-----------------------------------------------------
+FOOTER
+-----------------------------------------------------*/
+footer {
+    background-color: var(--brun);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+.some_img {
+    width: 32px;
+    margin-right: 16px; /*afstand mellem ikoner*/
+    padding-bottom: 10px;
+}
+
+.footer_card_header {
+    margin-bottom: 7px;
+    color: var(--hvid);
+}
+
+input[type=text] {
+    width: 250px;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--sort);
+    box-sizing: border-box;
+  }
+  
+input[type=submit] {
+    width: 80px;
+    padding: 8px;
+    margin: 8px 85px;
+    background-color: var(--orange);
+    color: var(--hvid);
+    border: none;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+address {
+    color: var(--hvid);
+    font-style: normal; /*ellers er det kursiv*/
+}
+
+.email, .telefonnummer {
+    color: var(--hvid);
+}
+
+.telefonnummer {
+    margin-top: 5px;
+}
+
+.footer_card:first-child .footer_card_header {
+    margin-bottom: 14px; /*margin mellem "følg os" og ikoner*/
+}
+
+.footer_card {
+    width: 13rem;
+}
+
+.footer_card:nth-child(2) {
+    margin-left: -10%;
+}
+
+
+/* ------------------------------------------------
+MEDIA QUERY TIL MOBIL
+------------------------------------------------ */
+
+@media only screen and (max-width: 900px) {
+
+    /* ------------------------------------------------
+    TOPBAR
+    ------------------------------------------------ */
+    .top_bar_items {
+        display: flex;
+        justify-content: center;
+
+    }
+    
+    
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------ */
+
+    .mobileiconlabel{
+        display: inline-block;
+        color: var(--sort); /* farve på burgermenu */
+        background: var(--gul); /* baggrundsfarve på burgermenu */
+        font-style: normal;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .mobilmenuitem{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: black; /* tekstfarve på menuitem*/
+        text-decoration: none;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .menu_items {
+        display: none;
+    }
+
+    .mobilmenu input:checked ~ .mobilmenuitems {
+        display: block;
+    }
+
+    /* Skjule textbox og menuitems indtil der klikkes */
+    .menuitems__container, .mobileicon{
+        display: none;
+    }
+
+    /*Vis menuitems når mobileicon-label er klikket*/
+    .mobilmenu input:checked ~ .menuitems__container{
+    display: block;
+    }
+
+    .mobilmenuitem:hover {
+        background-color: var(--orange);
+        color: var(--hvid);
+    }
+
+
+    /* ------------------------------------------------
+    SENESTE
+    ------------------------------------------------ */
+    .senest_section {
+        margin: 30px 5%;
+    }
+
+    .senest_inner_section {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+    
+    .senest_inner_flexbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .senest_et_card {
+        width: 100%;
+    }
+
+    .senest_billede {
+        width: 100%;
+    }
+
+    .text_block_senest {
+        width: 100%;
+    }
+
+    /* ------------------------------------------------
+    FOOTER
+    ------------------------------------------------ */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 35rem;
+        align-items: center;
+        text-align: left;
+        padding-top: 25px;
+    }
+
+    .footer_card {
+        padding-top: 10px;
+    }
+      
+
+
+
+
+
+
+
+
+
+}
+
